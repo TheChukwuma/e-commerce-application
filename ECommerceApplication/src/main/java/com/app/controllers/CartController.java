@@ -37,6 +37,8 @@ public class CartController {
 	public ResponseEntity<List<CartDTO>> getCarts() {
 		
 		List<CartDTO> cartDTOs = cartService.getAllCarts();
+
+		System.out.println("the cards is a total of " + cartDTOs.size());
 		
 		return new ResponseEntity<List<CartDTO>>(cartDTOs, HttpStatus.FOUND);
 	}
